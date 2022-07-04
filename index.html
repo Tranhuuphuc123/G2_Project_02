@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=======================FONT Icon=======================-->  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="../G2_Project_02/lib/swipper/swiper-bundle.min.css">
+
+        <!--=============== CSS CÁ NHÂN ===============-->
+        <link rel="stylesheet" href="../G2_Project_02/css/style.css">
+        <link rel="stylesheet" href="../G2_Project_02/css/slider.css">
+
+        <title>Renponsive website Beautiful Beaches</title>
+    </head>
+    <body>
+    <!--======phần thẻ nav======-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo"><img src="../G2_Project_02/img/logo/logo.jpg" alt="">
+                    <style>
+                        .nav__logo img{
+                            width: 150px;
+                            border-radius: 60px;
+                        }
+                    </style>
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                              </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#discover" class="nav__link">Discover</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#place" class="nav__link">Places</a>
+                        </li>
+                    </ul>
+
+                 <!-- Theme đổi màu nền tối /sáng cho web -->
+                    <div class="nav__dark">             
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+    <!--==================== Trang Slider ảnh Home ====================-->
+        <main class="main">
+            <div class="slider">
+                <!-- fade css -->
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>IMAGE 1</h1>
+                        <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+                        <a href="#" class="button">Subrice</a>
+                    </div>
+                    <img src="../G2_Project_02/img/img3/anhnen1.jpg" style="width: 100%; height: 100%;">
+
+                   <!--menu con trong slider--> 
+
+                    <div class="home__info">
+                        <div>
+                            <span class="home__info-title">10 best Beaches to visit</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="../G2_Project_02/img/img3/anhnen1.jpg" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>IMAGE 2</h1>
+                        <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+                        <a href="#" class="button">Subrice</a>
+                    </div>
+                    <img src="../G2_Project_02/img/img3/anhnen2.jpg" style="width: 100%; height: 100%;">
+
+                     <!--menu con trong slider--> 
+                     <div class="home__info">
+                        <div>
+                            <span class="home__info-title">10 best Beaches to visit</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="../G2_Project_02/img/img3/anhnen2.jpg" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>IMAGE 3</h1>
+                        <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+                        <a href="#" class="button">Subrice</a>
+                    </div>
+                    <img src="../G2_Project_02/img/img3/anhnen3.jpg" style="width: 100%; height: 100%;">
+
+                    <!--menu con trong slider--> 
+                    <div class="home__info">
+                        <div>
+                            <span class="home__info-title">10 best Beaches to visit</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="../G2_Project_02/img/img3/anhnen3.jpg" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>IMAGE 4</h1>
+                        <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+                        <a href="#" class="button">Subrice</a>
+                    </div>
+                    <img src="../G2_Project_02/img/img3/anhnen4.jpg" style="width: 100%; height: 100%;">
+
+                    <!--menu con trong slider--> 
+                    <div class="home__info">
+                        <div>
+                            <span class="home__info-title">10 best Beaches to visit</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="../G2_Project_02/img/img3/anhnen4.jpg" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>IMAGE 5</h1>
+                        <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+                        <a href="#" class="button">Subrice</a>
+                    </div>
+                    <img src="../G2_Project_02/img/img3/anhnen5.jpg" style="width: 100%; height: 100%;">
+
+                    <!--menu con trong slider--> 
+                    <div class="home__info">
+                        <div>
+                            <span class="home__info-title">10 best Beaches to visit</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="../G2_Project_02/img/img3/anhnen5.jpg" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+                <!-- /fade css -->
+
+                
+                
+                <!-- onclick js -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                <div class="dotsbox" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+                <!-- /onclick js -->
+            </div>
+
+            <!--==================== ABOUT giới thiệu ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">More Information <br> About The Best Beaches</h2>
+                        <p class="about__description">nội dung đang xây dựng
+                        </p>
+                        <a href="#" class="button">Reserve a place</a>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="../G2_Project_02/img/logo//logo.jpg" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="../G2_Project_02/img/img/about2.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+             <!--================ SWIPPER ẢNH ===========   ========-->
+            <section class="discover section" id="discover">
+                <h2 class="section__title">Discover the most <br> attractive places</h2>
+                
+                <div class="discover__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== Ảnh 1 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover1.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Bali</h2>
+                                <span class="discover__description">24 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== Ảnh 2 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover2.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Hawaii</h2>
+                                <span class="discover__description">15 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== Ảnh 3 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover3.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Hvar</h2>
+                                <span class="discover__description">18 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== Ảnh 4 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover4.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Whitehaven</h2>
+                                <span class="discover__description">32 tours available</span>
+                            </div>
+                        </div>
+                         <!--==================== Ảnh 5 ====================-->
+                         <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover1.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Bali</h2>
+                                <span class="discover__description">24 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== Ảnh 6 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover2.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Hawaii</h2>
+                                <span class="discover__description">15 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== Ảnh 7 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover3.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Hvar</h2>
+                                <span class="discover__description">18 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== Ảnh 8 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="../G2_Project_02/img/img/discover4.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Whitehaven</h2>
+                                <span class="discover__description">32 tours available</span>
+                            </div>
+                        </div>               
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </section>
+
+
+
+
+
+                    
+            <!--==================== THÀNH TỰU CÔNG TY ====================-->
+            <section class="experience section">
+                <h2 class="section__title">With Our Experience <br> We Will Serve You<br>(Note: nội dung đang xây dựng)</h2>
+              
+
+                <div class="experience__container container grid">
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number">20</h2>
+                            <span class="experience__description">Year <br> Experience</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">75</h2>
+                            <span class="experience__description">Complete <br> tours</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">650+</h2>
+                            <span class="experience__description">Tourist <br> Destination</span>
+                        </div>
+                    </div>
+
+                    <div class="experience__img grid">
+                        <div class="experience__overlay">
+                            <img src="../G2_Project_02/img/img/experience1.jpg" alt="" class="experience__img-one">
+                        </div>
+                        
+                        <div class="experience__overlay">
+                            <img src="../G2_Project_02/img/img/experience2.jpg" alt="" class="experience__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+
+            <!--==================== List of Beaches  ====================-->
+            <section class="place section" id="place">
+                <h2 class="section__title">Choose Your Place</h2>
+
+            <!--===hàng 01====-->     
+                <div class="place__container container grid">
+                    <!--==================== Sea 1 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place1.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bali</h3>
+                                <span class="place__subtitle">Indonesia</span>
+                                <span><i class="far fa-clock"></i>3 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Indonesia</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 2 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place2.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bora Bora</h3>
+                                <span class="place__subtitle">Polinesia</span>
+                                <span><i class="far fa-clock"></i>3 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Bora Bora</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 3 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place3.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,9</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hawaii</h3>
+                                <span class="place__subtitle">EE.UU</span>
+                                <span><i class="far fa-clock"></i>4 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Hawaii</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 4 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place4.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Whitehaven</h3>
+                                <span class="place__subtitle">Australia</span>
+                                <span><i class="far fa-clock"></i>6 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Whitehaven</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 5 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place5.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hvar</h3>
+                                <span class="place__subtitle">Croacia</span>
+                                <span><i class="far fa-clock"></i>2 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Hvar</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                     <!--==================== Sea 6 ====================-->
+                     <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place5.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hvar</h3>
+                                <span class="place__subtitle">Croacia</span>
+                                <span><i class="far fa-clock"></i>6 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Croatia</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+               </div>
+
+
+        <!--===hàng 02====-->    
+               <div class="place__container container grid">
+                    <!--==================== Sea 1 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place1.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bali</h3>
+                                <span class="place__subtitle">Indonesia</span>
+                                <span><i class="far fa-clock"></i>6 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Bali</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 2 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place2.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bora Bora</h3>
+                                <span class="place__subtitle">Polinesia</span>
+                                <span><i class="far fa-clock"></i>7 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Bora Bora</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 3 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place3.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,9</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hawaii</h3>
+                                <span class="place__subtitle">EE.UU</span>
+                                <span><i class="far fa-clock"></i>6 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Hawaii</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 4 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place4.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Whitehaven</h3>
+                                <span class="place__subtitle">Australia</span>
+                                <span><i class="far fa-clock"></i>6 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Whitehaven</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== Sea 5 ====================-->
+                    <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place5.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hvar</h3>
+                                <span class="place__subtitle">Croacia</span>
+                                <span><i class="far fa-clock"></i>6 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Croatia</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                     <!--==================== Sea 6 ====================-->
+                     <div class="place__card">
+                        <img src="../G2_Project_02/img/img/place5.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hvar</h3>
+                                <span class="place__subtitle">Croacia</span>
+                                <span><i class="far fa-clock"></i>7 days travel</span><br>
+                                <span><i class="fas fa-map-marker-alt"></i>Vietnam</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+             <!--==================== VIDEO Quảng Cáo ====================-->
+             <section class="video section">
+                <h2 class="section__title">Video Tour</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">nội dung đang hoàn thiện
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="../G2_Project_02/video/video.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================== SUBSCRIBE liên kết trang Submit ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
+                        <p class="subscribe__description">Nội dung đang hoàn thiện
+                        </p>
+    
+                        <form action="" class="subscribe__form">
+                            <input type="text" placeholder="Enter email" class="subscribe__input">
+    
+                            <button class="button">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+
+       
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">Beautifule Beaches</h3>
+                        <p class="footer__description">nội dung đang xây dựng
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">HOME</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Features</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Company</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Team</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Plan y Pricing</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Become a member</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Support Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; cantho1995ct@gmail.com</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="../G2_Project_02/lib/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="../G2_Project_02/lib/swipper/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="../G2_Project_02/js/main.js"></script>
+        <script src="../G2_Project_02/js/slider.js"></script>
+    </body>
+</html>
