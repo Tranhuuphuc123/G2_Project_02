@@ -1,15 +1,8 @@
 /*==================== SHOW MENU ====================*/
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
+    //   navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
 
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
@@ -30,13 +23,13 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
-function scrollHeader(){
-    const header = document.getElementById('header')
-    // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+/*==================== thay đổi màu thẻ nav ở header khi croll trang (khóa trang)====================*/
+// function scrollHeader(){
+//     const header = document.getElementById('header')
+//     // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
+//     if(this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+// }
+// window.addEventListener('scroll', scrollHeader)
 
 /*==================== HIỆU ỨNG SWIPER kéo ảnh hàng ngang ====================*/
 var swiper = new Swiper('.swiper-container', {
@@ -45,10 +38,27 @@ var swiper = new Swiper('.swiper-container', {
     centeredSlides: true,
     slidesPerView: 'auto',
     coverflowEffect: {
-    rotate: 30,
+    rotate: 10,
     stretch: 10,
     depth: 60,
-    modifier: 4,
+    modifier: 6,
+    slideShadows : true,
+    },
+    pagination: {
+    el: '.swiper-pagination',
+    },
+});
+
+var swiper = new Swiper('.Hu', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 0,
+    modifier: 2,
     slideShadows : true,
     },
     pagination: {
@@ -89,7 +99,7 @@ function finalVideo(){
 videoFile.addEventListener('ended', finalVideo)
 
 
-/*==================== SHOW SCROLL UP ====================*/ 
+/*====================Hiển thị cho nút quay về thẻ nav ( nút mũi tên cúi trang) ====================*/ 
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
@@ -107,21 +117,16 @@ function scrollActive(){
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
         sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
     })
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== SCROLL REVEAL ANIMATION ====================*/
+/*==================== hiển thị  chức năng ảnh động khi croll ảnh  ====================*/
+// đây là phẩn tùy chỉnh hiệu ứng xuất hiện  kiểu animations hiệu ứng động xuất hiện khi croll ảnh kéo trang
 const sr = ScrollReveal({
     distance: '60px',
     duration: 2800,
-    // reset: true,
+    // reset: true, /* chức năng reset lại hiệu ứng croll animation khi rê trang( khóa lại do mất reset liên tục mất time) */
 })
 
 
@@ -153,7 +158,7 @@ const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
 
-// Previously selected topic (if user selected)
+// chủ đề đc chọn, thao tác trước đó (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
@@ -161,19 +166,31 @@ const selectedIcon = localStorage.getItem('selected-icon')
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
 
-// We validate if the user previously chose a topic
+//xác nhận chủ đề theme dark/light khi ấn chọn chế độ sáng tối
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
 }
 
-// Activate / deactivate the theme manually with the button
+//Kích hoạt / hủy kích hoạt chủ đề theo cách thủ công bằng nút
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
+    //Thêm hoặc xóa theme tối / biểu tượng icon
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+    //  lưu lại  chủ đề và biểu tượng hiện tại mà người dùng đã chọn
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/* phần xây dựng bản đồ */
+function myMap() {
+    var mapOptions = {
+    center: new google.maps.LatLng(-33.891049654862904, 151.27742942890129),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+    

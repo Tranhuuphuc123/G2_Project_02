@@ -19,52 +19,95 @@
         <title>Renponsive website Beautiful Beaches</title>
     </head>
     <body>
-    <!--======phần thẻ nav======-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo"><img src="../G2_Project_02/img/logo/logo.jpg" alt="">
-                    <style>
-                        .nav__logo img{
-                            width: 150px;
-                            border-radius: 60px;
-                        }
-                    </style>
-                </a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">About</a>
-                            <ul>
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                              </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#discover" class="nav__link">Discover</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#place" class="nav__link">Places</a>
-                        </li>
+      <!--====thẻ nav mục header=====-->
+      <nav  id="header">
+        <div class="wrapper" id="nav-menu">
+          <div class="logo">
+            <img src="../G2_Project_02/img/logo/logo.jpg" alt="">
+            <style>
+               .logo img{
+                    width: 150px;
+                    height: 60px;
+                    border-radius: 60px;
+                    margin-top: 30px;
+                    box-sizing: border-box;
+                }
+            </style>
+          </div>
+          <input type="radio" name="slider" id="menu-btn">
+          <input type="radio" name="slider" id="close-btn">
+          <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#" class="desktop-item">link</a>
+              <input type="checkbox" id="showDrop">
+              <label for="showDrop" class="mobile-item">link</label>
+              <ul class="drop-menu">
+                <li><a href="#">Drop menu 1</a></li>
+                <li><a href="#">Drop menu 2</a></li>
+                <li><a href="#">Drop menu 3</a></li>
+                <li><a href="#">Drop menu 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="desktop-item">List of Beaches</a>
+              <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">List of Beaches</label>
+              <div class="mega-box">
+                <div class="content">
+                  <div class="row">
+                    <img src="../G2_Project_02/img/logo/logo2.jpg" alt="">
+                  </div>
+                  <div class="row">
+                    <header>Asia</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Sea1</a></li>
+                      <li><a href="#">Sea2</a></li>
+                      <li><a href="#">Sea3</a></li>
+                      <li><a href="#">Sea4</a></li>
                     </ul>
-
-                 <!-- Theme đổi màu nền tối /sáng cho web -->
-                    <div class="nav__dark">             
-                        <span class="change-theme-name">Dark mode</span>
-                        <i class="ri-moon-line change-theme" id="theme-button"></i>
-                    </div>
-
-                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                  </div>
+                  <div class="row">
+                    <header>Euprope</header>
+                    <ul class="mega-links">
+                        <li><a href="#">Sea1</a></li>
+                        <li><a href="#">Sea2</a></li>
+                        <li><a href="#">Sea3</a></li>
+                        <li><a href="#">Sea4</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Americas</header>
+                    <ul class="mega-links">
+                        <li><a href="#">Sea1</a></li>
+                        <li><a href="#">Sea2</a></li>
+                        <li><a href="#">Sea3</a></li>
+                        <li><a href="#">Sea4</a></li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+            </li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-function-line"></i>
-                </div>
-            </nav>
-        </header>
+        <!--nút nhấn dark/light-->
+        <!-- <div class="nav__dark">             
+                <span class="change-theme-name">Dark mode</span>
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+            </div>
+            <i class="ri-close-line nav__close" id="nav-close"></i>
+        </div>    -->
+        <!--end nút nhấn dark/ligh--> 
+    </nav>
+        <!--=========end nav mục header============-->
+
+
+
 
     <!--==================== Trang Slider ảnh Home ====================-->
         <main class="main">

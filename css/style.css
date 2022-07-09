@@ -82,13 +82,13 @@ body.dark-theme {
 }
 
 /*========== Button Dark/Light ==========*/
-.nav__dark {
+/* .nav__dark {
   display: flex;
-  align-items: center;
   column-gap: 2rem;
+  align-items: center;
   position: absolute;
   left: 3rem;
-  bottom: 4rem;
+  bottom: 2rem;  
 }
 
 .change-theme, .change-theme-name {
@@ -102,7 +102,17 @@ body.dark-theme {
 
 .change-theme-name {
   font-size: var(--small-font-size);
-}
+} */
+/* chức năng nút dark/light trên thanh nav*/
+/* .nav__close {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+} */
+
 
 /*=============== BASE thuộc tính chung cho tất cả trang web ===============*/
 * {
@@ -119,7 +129,8 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
+  background-color: rgba(14, 14, 20, 0.952);
   color: var(--text-color);
 }
 
@@ -162,7 +173,7 @@ input {
   overflow-x: hidden;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== CÁC LỚP CSS CÓ THỂ SỬ DỤNG LẠI ===============*/
 .section {
   padding: 4.5rem 0 2.5rem;
 }
@@ -186,128 +197,154 @@ input {
   gap: 1.5rem;
 }
 
-/*=============== HEADER ===============*/
-.header {
+/*=============== NAV ==============*/
+nav{
+  position: fixed;/*thuộc tính cố định ví trí khi croll trang*/
+  /* z-index: 99; */
   width: 100%;
-  position: fixed;
-  top: 0;
+  top:0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color:rgb(8, 7, 10);
   margin-bottom: 50px;
+  background: rgba(11, 7, 20, 0.90);
 }
-
-/*=============== NAV ===============*/
-.nav {
-  height: var(--header-height);
+nav .wrapper{
+  position: relative;
+  max-width: 1300px;
+  padding: 0px 30px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
-
-.nav__logo, .nav__toggle {
-  color: var(--white-color);
+.wrapper .logo a{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
 }
-
-.nav__logo {
-  font-weight: var(--font-semi-bold);
+.wrapper .nav-links{
+  display: inline-flex;
 }
-
-.nav__toggle {
-  font-size: 1.2rem;
-  cursor: pointer;
+.nav-links li{
+  list-style: none;
 }
-
-.nav__menu {
-  position: relative;
+.nav-links li a{
+  color: #929399ce;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
-
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    background-color: var(--body-color);
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100%;
-    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
-    padding: 3rem;
-    transition: .4s;
-  }
+.nav-links li a:hover{
+  background: #3A3B3C;
 }
-
-.nav__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2.5rem;
-}
-
-.nav__link {
-  color: var(--text-color-light);
-  font-weight: var(--font-semi-bold);
-  text-transform: uppercase;
-}
-
-.nav__link:hover {
-  color: var(--text-color);
-}
-
-.nav__close {
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
-}
-
-
-/*menu con*/
-header nav ul li{
-  position: relative;
-}
-
-header nav ul li ul{
-  position: absolute;
-  background: rgba(14, 13, 13, 0.973);
+.nav-links .mobile-item{
   display: none;
 }
-
-header nav ul li:hover ul{
+.nav-links .drop-menu{
+  position: absolute;
+  background: rgba(11, 7, 20, 0.90);
+  width: 180px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: rgba(11, 7, 20, 0.90);
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+.content .row img{
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+.content .row header{
+  color: #929399ce;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0 20px;
+  color: #d9d9d9;
+  font-size: 17px;
   display: block;
 }
-
-header nav ul li ul li{
-  display: block;
-  width: 200px;
+.row .mega-links li a:hover{
+  color: #f2f2f2;
+}
+.wrapper .btn{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
 }
 
-header nav ul li a{
-  height: 50px;
-  line-height: 50px;
-  padding: 0 5px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  display: block;
-}
-
-header nav ul li a:hover{
-  color: rgb(184, 17, 17);
-  /* background: rgb(3, 168, 244); */
+/* tắt dấu x (lỗi )phụ trong remision khi reponsive*/
+.ri-close-line:before {
+  content: none!important;
 }
 
 
 
-
-/* show menu */
-.show-menu {
-  right: 0;
-}
-
-/* Change background chuyển màu thanh nav khi croll */
+/* Change background chuyển màu thanh nav khi croll
+Đây là nơi thiết lập màu nền cho thanh nav kết hợp với javascript 
+để khi croll ảnh và khi người dùng chọn chế độ dark/light
+thi nó sẽ chuyển màu theo phông nền của chế độ dark/light
+*/
 .scroll-header {
-  background-color: var(--body-color);
-  box-shadow: 0 0 4px rgba(226, 226, 226, 0.1);
+  /* background-color: var(--body-color);
+  box-shadow: 0 0 4px rgba(226, 226, 226, 0.1); */
 }
 
 .scroll-header .nav__logo,
@@ -723,6 +760,9 @@ header nav ul li a:hover{
 
 
 /*=============== FOOTER ===============*/
+footer{
+  background: rgba(7, 4, 14, 0.247);
+}
 .footer__container {
   row-gap: 5rem;
 }
@@ -735,14 +775,17 @@ header nav ul li a:hover{
 .footer__title, 
 .footer__subtitle {
   font-size: var(--h3-font-size);
+  color: #FFF;
 }
 
 .footer__title {
   margin-bottom: var(--mb-0-5);
+  color: #FFF;
 }
 
 .footer__description {
   margin-bottom: var(--mb-2);
+  color: #fff;
 }
 
 .footer__social {
@@ -761,6 +804,7 @@ header nav ul li a:hover{
 
 .footer__link {
   color: var(--text-color);
+  color: #fff;
 }
 
 .footer__link:hover {
@@ -866,27 +910,11 @@ header nav ul li a:hover{
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
-  }
-  .nav {
-    height: calc(var(--header-height) + 1.5rem);
-  }
-  .nav__link {
-    color: var(--white-color);
-    text-transform: initial;
-  }
-  .nav__link:hover {
-    color: var(--white-color);
-  }
-  .nav__dark {
+  } 
+
+  /*xử lý đổi theme (bị khóa lại) */
+  /* .nav__dark {
     position: initial;
-  }
-  .nav__menu {
-    display: flex;
-    column-gap: 1rem;
-  }
-  .nav__list {
-    flex-direction: row;
-    column-gap: 4rem;
   }
   .nav__toggle, .nav__close {
     display: none;
@@ -896,7 +924,7 @@ header nav ul li a:hover{
   }
   .change-theme {
     color: var(--white-color);
-  }
+  } */
   .active-link::before {
     background-color: var(--white-color);
   }
@@ -1059,6 +1087,131 @@ header nav ul li a:hover{
   .home__container, .home__img {
     height: 640px;
   }
+}
+
+/*xử lý reponsive cho thanh nav*/
+@media screen and (max-width: 970px) {
+  .wrapper .btn{
+    display: block;
+  }
+  .wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
+  }
+  #menu-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn{
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  .nav-links li{
+    margin: 15px 10px;
+  }
+  .nav-links li a{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu{
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .nav-links .desktop-item{
+    display: none;
+  }
+  .nav-links .mobile-item{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover{
+    background: #3A3B3C;
+  }
+  .drop-menu li{
+    margin: 0;
+  }
+  .drop-menu li a{
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  .content .row .mega-links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li{
+    margin: 0;
+  }
+  .content .row header{
+    font-size: 19px;
+  }
+}
+nav input{
+  display: none;
 }
 
 
