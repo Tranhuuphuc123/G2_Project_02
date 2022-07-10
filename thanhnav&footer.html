@@ -3,24 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--=============== REMIXICONS ===============-->
+        <!--=============== lib online icon, font chữ ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
         <!--=======================FONT Icon=======================-->  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        
-        <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="../G2_Project_02/lib/swipper/swiper-bundle.min.css">
 
-        <!--=============== CSS CÁ NHÂN ===============-->
-        <link rel="stylesheet" href="../G2_Project_02/css/style.css">
-        <link rel="stylesheet" href="../G2_Project_02/css/slider.css">
-        <link rel="stylesheet" href="../G2_Project_02/css/sub-menu.css">
+       <!--=============== CSS CÁ NHÂN ===============-->
+        <link rel="stylesheet" href="../G2_Project_02/css/nav&footer.css">
 
         <title>Renponsive website Beautiful Beaches</title>
     </head>
-    <body  onload="myMap()">
-      <!--====thẻ nav mục header=====-->
+    <body>
+      <!--====thẻ nav=====-->
         <nav  id="header">
             <div class="wrapper" id="nav-menu">
               <div class="logo">
@@ -66,8 +60,11 @@
                         <ul class="mega-links">
                           <li><a href="#">Sea1</a></li>
                           <li><a href="#">Sea2</a></li>
-                          <li><a href="#">Sea3</a></li>
-                          <li><a href="#">Sea4</a></li>
+                        </ul>
+                        <header>Australia</header>
+                        <ul class="mega-links">
+                          <li><a href="#">Sea1</a></li>
+                          <li><a href="#">Sea2</a></li>
                         </ul>
                       </div>
                       <div class="row">
@@ -75,8 +72,11 @@
                         <ul class="mega-links">
                             <li><a href="#">Sea1</a></li>
                             <li><a href="#">Sea2</a></li>
-                            <li><a href="#">Sea3</a></li>
-                            <li><a href="#">Sea4</a></li>
+                        </ul>
+                        <header>Oceania</header>
+                        <ul class="mega-links">
+                            <li><a href="#">Sea1</a></li>
+                            <li><a href="#">Sea2</a></li>
                         </ul>
                       </div>
                       <div class="row">
@@ -84,8 +84,11 @@
                         <ul class="mega-links">
                             <li><a href="#">Sea1</a></li>
                             <li><a href="#">Sea2</a></li>
-                            <li><a href="#">Sea3</a></li>
-                            <li><a href="#">Sea4</a></li>
+                        </ul>
+                        <header>Africa</header>
+                        <ul class="mega-links">
+                            <li><a href="#">Sea1</a></li>
+                            <li><a href="#">Sea2</a></li>
                         </ul>
                       </div>
                     </div>
@@ -95,55 +98,27 @@
               </ul>
               <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
             </div>
-
-            <!--nút nhấn dark/light-->
-            <!-- <div class="nav__dark">             
-                    <span class="change-theme-name">Dark mode</span>
-                    <i class="ri-moon-line change-theme" id="theme-button"></i>
-                </div>
-                <i class="ri-close-line nav__close" id="nav-close"></i>
-            </div>    -->
-            <!--end nút nhấn dark/ligh--> 
         </nav>
         <!--=========end nav mục header============-->
 
 
+
+        
        
-
-          <!--==================== THÀNH TỰU CÔNG TY ====================-->
-          <section class="experience section">
-            <h2 class="section__title">With Our Experience <br> We Will Serve You<br>(Note: nội dung đang xây dựng)</h2>
-            <div class="experience__container container grid">
-                <div class="experience__content grid">
-                    <div class="experience__data">
-                        <h2 class="experience__number">20</h2>
-                        <span class="experience__description">Year <br> Experience</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">75</h2>
-                        <span class="experience__description">Complete <br> tours</span>
-                    </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">650+</h2>
-                        <span class="experience__description">Tourist <br> Destination</span>
-                    </div>
-                </div>
-
-                <!--bản đồ định vị-->
-                <div class="experience__img grid">
-                    <div id="map" class="bando"></div>
-                   <style>
-                       .bando{
-                         width: 800px;
-                         height: 600px;
-                         border: solid 0.3px;
-                       }
-                   </style>
-                </div>
-            </div>
-        </section>
+<!---phần này bỏ nha ví dụ chó khoảng trắng thui-->
+       <div class="vidu">
+           <style>
+                .vidu{
+                    background-color: aqua;
+                    height: 150px;
+                    width: 400px;
+                    margin-top: 300px;
+                    margin-bottom: 150px;
+                    margin-left: 450px;
+                }
+           </style>
+       </div>
+<!--phần bỏ-->
 
     
 
@@ -231,22 +206,17 @@
             </div>
         </footer>
 
-         <!--========== SCROLL UP ==========-->
-        <a href="#" class="scrollup" id="scroll-up">
+         <!--========== SCROLL UP ( nút croll về trang đầu)==========-->
+         <a href="#" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line scrollup__icon"></i>
         </a>
-
-        <!--=============== SCROLL REVEAL===============-->
-        <script src="../G2_Project_02/lib/scrollreveal.min.js"></script>
-        
-        <!--=============== SWIPER JS ===============-->
-        <script src="../G2_Project_02/lib/swipper/swiper-bundle.min.js"></script>
-
-        <!--=====thư viện bản đồ=======-->
-        <script src="https://www.google.com/maps/api/js?callback=myMap"></script>
-
-        <!--=============== MAIN JS ===============-->
-        <script src="../G2_Project_02/js/main.js"></script>
-        <script src="../G2_Project_02/js/slider.js"></script>
+        <!--===script nút croll up======-->
+        <script>
+            function scrollUp(){
+            const scrollUp = document.getElementById('scroll-up');
+            if(this.scrollY ) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+                }
+            window.addEventListener('scroll', scrollUp)
+        </script>
     </body>
 </html>
