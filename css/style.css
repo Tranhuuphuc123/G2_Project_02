@@ -98,9 +98,9 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  /* background-color: var(--body-color); */
-  background-color: rgba(14, 14, 20, 0.952);
+  /* background-color: rgba(14, 14, 20, 0.952); */
   color: var(--text-color);
+
 }
 
 h1, h2, h3 {
@@ -437,6 +437,13 @@ nav .wrapper{
 
 .about__description {
   margin-bottom: var(--mb-2);
+  text-align: justify;
+  
+}
+.the__phu{
+   margin-left: -150px;
+   text-align: justify;
+   width: 490px;
 }
 
 .about__img {
@@ -485,7 +492,7 @@ nav .wrapper{
 .discover__title, 
 .discover__description {
   /* color: var(--white-color); */
-  color:rgba(93, 93, 97, 0.952)!important;
+  color:rgba(194, 194, 206, 0.952)!important;
 }
 
 .discover__title {
@@ -700,6 +707,11 @@ nav .wrapper{
   padding: .75rem 1rem;
 }
 
+/*khắc phục hiệu ứng hover khi link trang bị mất màu gốc ( của icon mũi tên mục list of beaches*/
+.ri-arrow-right-line{
+    color: #d9d9d9!important;
+}
+
 /*tùy chỉnh các icon vs font trong list of beaches*/
 
 .far,.fa-clock{
@@ -749,7 +761,7 @@ nav .wrapper{
 
 /*=============== FOOTER ===============*/
 footer{
-  background: rgba(7, 4, 14, 0.247);
+  background: rgba(11, 7, 20, 0.90);
 }
 .footer__container {
   row-gap: 5rem;
@@ -877,6 +889,11 @@ footer{
   .video__container {
     padding: 0;
   }
+
+  .map{
+      min-height: 300px;
+      padding: 0;
+  }
 }
 
 /* For medium devices */
@@ -946,6 +963,7 @@ footer{
   .about__description {
     margin-bottom: var(--mb-2);
   }
+
   .discover__container {
     width: 610px;
     margin-left: auto;
